@@ -1,0 +1,20 @@
+name: Docker Build Test
+
+on:
+  push:
+    branches: [ "main" ]  # Trigger this when we push to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4  # Step 1: Robot downloads your code
+
+      - name: Build and Test
+        uses: docker/build-push-action@v5
+        with:
+          context: ./Docker         # Step 2: Robot "stands" in the Docker folder
+          file: ./Docker/Dockerfile  # Step 3: Robot reads the Dockerfile
+          push: false                # Just a test, don't save yet
+          tags: zn-app:latest
