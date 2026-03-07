@@ -1,0 +1,28 @@
+body {
+    background-color: #1a1a1a;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    text-align: center;
+    border: 2px solid #00ff00;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00ff00;
+}
+button {
+    background: transparent;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+button:hover {
+    background: #00ff00;
+    color: #1a1a1a;
+}
